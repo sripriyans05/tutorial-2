@@ -1,0 +1,81 @@
+QUESTION NO:1
+
+
+#include<stdio.h>
+int main()
+{
+    int i,j,r,c,n,sum=0;     //variable declaration
+    int a[10][10];           //size of an dimensional array
+    printf("enter the number of row and columns:");
+    scanf("%d %d",&r,&c);     //scanning the numbers of rows and colums
+    printf("enter the matrix elements:");
+    for(i=0;i<r;i++)           //getting the input from user
+    {
+    for(j=0;j<c;j++)
+    {
+    scanf("%d",&a[i][j]);
+    }
+    }
+    printf("enter column number: ");
+    scanf("%d",&n);            //getting input from user for which column to be added
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+          if(i<r&&j==n)
+          sum=sum+a[i][j];      //adding the elements in n column
+        }
+    }
+    printf("%d",sum);          //getting output
+}
+
+/* It is used to add particular mark of the subject.
+    It is used to the add the amount at particular date*/
+
+QUESTION NO:2
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int a[3][3],i,j;   //declaration of variables
+    int sa[10],k=0;
+    printf("Enter elements for 3 * 3 matrix\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            scanf("%d",&a[i][j]);   //getting input from user
+            sa[k]=a[i][j];
+            k++;
+
+        }
+    }
+    printf("Matrix Elements are\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("%d ",a[i][j]);     //display the matrix elements
+        }
+        printf("\n");
+    }
+    printf("Duplicate Array Elements are\n");
+        for(int i=0;i<9; i++)
+    {
+        for(int j=i+1;j<9;j++)
+        {
+            if(sa[i] == sa[j])           //finding the duplicate element from the matrix by comparing
+            {
+                printf("%d ", sa[j]);   //getting output
+            }
+        }
+    }
+    return 0;
+}
+
+
+/* It is used to find the identical scored by the students.
+   to check whether the given matrix is identicl*/ 
+   
+
+
